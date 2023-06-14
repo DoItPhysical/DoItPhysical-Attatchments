@@ -1,0 +1,230 @@
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    background: transparent;
+	/* background: url('https://i.imgur.com/xoMFic7.png') center center no-repeat fixed; */
+	background-size:cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+
+#wrap {
+	display: block;
+	background:radial-gradient(circle at left, rgba(60,0,0,1) -20%, rgba(40,40,40,0.4) 50%);
+    position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	overflow: auto;
+	width: 100%;
+	height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	color: rgba(0, 0, 0, 0.9);
+
+}
+
+#select-attachment {
+	position:absolute;
+	width:16vw;
+	height:20vw;
+	top:48%;
+	left:5vw;
+	transform:translate(0%,-50%);
+}
+
+#attachment-title {
+	width:100%;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	font-size:1.2vw;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+	text-align:center;
+	text-shadow:0 0 1vw rgba(255,150,50,1);
+}
+
+#attachment-title span {
+	color:rgba(255,210,50,1);
+}
+
+#attachments {
+	background:rgba(255,255,255,0);
+	width: 6vw;
+	margin: 0 auto;
+    text-align: left;
+    font-size: 15px;
+	padding:0.5vw;
+	color: white;
+}
+
+#attachments td{
+	padding:0.2vw;
+	vertical-align:center;
+	text-align:center;
+}
+
+
+#equiped {
+	width:8vw;
+	height:3vw;
+	background:rgba(45,45,45,0.4);
+	font-family:Bebas Nue;
+	font-size:1vw;
+	font-weight:300;
+	text-shadow: 0 0 1vw rgba(155,230,0,1);
+	color:rgba(165,225,50,1);
+	border:0.05vw solid rgba(155,230,50,1);
+	border-left:0.5vw solid rgba(155,230,50,1);
+	outline:none;
+	transition:0.3s;
+	cursor:pointer;
+}
+
+#equiped:hover {
+	background:rgba(155,220,50,1);
+	color:rgba(255,255,255,1);
+	border:0.05vw solid rgba(125,200,50,1);
+}
+
+#not-equiped {
+	width:8vw;
+	height:3vw;
+	background:rgba(45,45,45,0.4);
+	font-family:Bebas Nue;
+	font-size:1vw;
+	font-weight:300;
+	text-shadow: 0 0 1vw rgba(255,0,0,1);
+	color:rgba(255,70,70,1);
+	border:0.05vw solid rgba(255,50,50,1);
+	border-left:0.5vw solid rgba(255,50,50,1);
+	outline:none;
+	transition:0.3s;
+	cursor:pointer;
+}
+
+#not-equiped:hover {
+	background:rgba(255,50,50,1);
+	color:rgba(255,255,255,1);
+	border:0.05vw solid rgba(255,50,50,1);
+}
+
+
+.suppressor, .extended, .grip, .scope, .flashlight, .yusuf, .equipAll, .removeAll, .not-equiped, .equiped {
+	width:2vw;
+	height:2vw;
+	cursor:pointer;
+	background:rgba(255,255,255,0.1);
+	border:0.05vw solid rgba(255,255,255,0.1);
+	padding:0.5vw;
+	filter:drop-shadow(0 0 0.2vw rgba(0,0,0,0));
+	transition:0.3s;
+}
+
+#equipAll, #removeAll {
+	width:2vw;
+	height:2vw;
+	cursor:pointer;
+	background:rgba(255,255,255,0.1);
+	border:0.05vw solid rgba(255,255,255,0.1);
+	padding:0.5vw;
+	filter:drop-shadow(0 0 0.2vw rgba(0,0,0,0));
+	transition:0.3s;
+}
+
+.equiped {
+	filter:drop-shadow(0 0 0.8vw rgba(120,255,0,1));
+	border:0.05vw solid rgba(160,255,50,0.4);
+}
+
+.not-equiped {
+	filter:drop-shadow(0 0 0.8vw rgba(255,0,0,1));
+	border:0.05vw solid rgba(255,50,50,0.4);
+}
+
+
+
+.declineBtn {
+	background: url('../images/button.gif') top center no-repeat;
+	/* background-color:#da3f33; */
+	border-radius:3px;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding: 10px 50px;
+	line-height:25px;
+	text-decoration:none;
+	cursor: pointer;
+    border: none;
+	text-shadow:0px 0px 8px #5d0000;
+	transition: 0.3s;
+}
+.declineBtn:hover {
+	box-shadow: 0 0 20px rgb(255 0 0 / 70%);
+    text-shadow: 0px 0px 8px #5d0000;
+}
