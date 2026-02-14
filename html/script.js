@@ -60,23 +60,23 @@ $(function() {
 	document.onkeyup = function(event) {
 		if (event.key == 'Escape') {
 			$('#wrap').hide();
-			$.post('https://esx_attatchments/quit', JSON.stringify({}));
+			$.post(`https://${GetParentResourceName()}/quit`, JSON.stringify({}));
 		}
 	};
 });
 
 addAllComponents = function(weapon) {
-	$.post('https://esx_attatchments/addAllComponents', JSON.stringify({weapon: weapon}));
+	$.post(`https://${GetParentResourceName()}/addAllComponents`, JSON.stringify({weapon: weapon}));
 }
 
 removeAllComponents = function(weapon) {
-	$.post('https://esx_attatchments/removeAllComponents', JSON.stringify({weapon: weapon}));
+	$.post(`https://${GetParentResourceName()}/removeAllComponents`, JSON.stringify({weapon: weapon}));
 }
 
 function RemoveComponent(item, weapon) {
-	$.post('https://esx_attatchments/remove', JSON.stringify({item: item, weapon: weapon}));
+	$.post(`https://${GetParentResourceName()}/remove`, JSON.stringify({item: item, weapon: weapon}));
 }
 
 function AddComponent(item, weapon) {
-	$.post('https://esx_attatchments/add', JSON.stringify({item: item, weapon: weapon}));
+	$.post(`https://${GetParentResourceName()}/add`, JSON.stringify({item: item, weapon: weapon}));
 }
